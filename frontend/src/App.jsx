@@ -15,7 +15,7 @@ function App() {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch("http://localhost:4000/graphql", {
+      const response = await fetch("https://task-manager-mx88.onrender.com/graphql", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -52,7 +52,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/graphql", {
+      const response = await fetch("https://task-manager-mx88.onrender.com/graphql", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -80,7 +80,7 @@ function App() {
   const handleUpdateTask = async (id) => {
     const task = editingTask[id];
     try {
-      const response = await fetch("http://localhost:4000/graphql", {
+      const response = await fetch("https://task-manager-mx88.onrender.com/graphql", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -109,7 +109,7 @@ function App() {
     if (!confirm("Are you sure you want to delete this task?")) return;
 
     try {
-      await fetch("http://localhost:4000/graphql", {
+      await fetch("https://task-manager-mx88.onrender.com/graphql", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
