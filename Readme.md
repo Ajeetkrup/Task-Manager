@@ -1,4 +1,3 @@
-```markdown
 # 📝 Task Manager (GraphQL + React)
 
 A simple **Task Manager** web app built with **React (frontend)** and **Node.js + Express + GraphQL (backend)**.  
@@ -13,9 +12,8 @@ You can create, update, and delete tasks with real-time updates from a GraphQL A
 ---
 
 ## 📂 Project Structure
-```
 
-.
+````
 ├── backend/           # Node.js + Express + GraphQL server
 │   ├── index.js       # Entry point and graphql schema
 │   └── package.json   # Backend dependencies
