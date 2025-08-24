@@ -129,9 +129,21 @@ const server = new ApolloServer({
 
 await server.start();
 
+const allowedOrigins = ['https://task-manager-beryl-mu.vercel.app']
+
 app.use(
   '/graphql',
-  cors("*"),
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg = 'CORS policy: This origin is not allowed.';
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+    credentials: true,
+  }),
   express.json(),
   expressMiddleware(server)
 );
