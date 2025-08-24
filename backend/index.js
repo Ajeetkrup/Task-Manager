@@ -140,8 +140,8 @@ app.get('/', (req, res) => {
   res.send('GraphQL Server is running! Visit /graphql');
 });
 
-const PORT = 4000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server ready at http://localhost:${PORT}/graphql`);
   console.log(`📊 GraphQL Playground available in browser`);
 });
