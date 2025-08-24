@@ -1,5 +1,3 @@
-Here’s a clean **README.md** for your project:
-
 ```markdown
 # 📝 Task Manager (GraphQL + React)
 
